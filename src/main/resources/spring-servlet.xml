@@ -24,6 +24,9 @@
         <!--json数据处理-->
         <property name="messageConverters">
             <list>
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                    <property name="supportedMediaTypes" value="text/html;charset=UTF-8"></property>
+                </bean>
                 <bean class="org.springframework.http.converter.json.GsonHttpMessageConverter"></bean>
             </list>
         </property>
